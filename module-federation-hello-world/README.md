@@ -249,3 +249,6 @@ Have a particular look at the following files:
         - declare module 'new-module/Module';
     - mf.manifest.json
         - "new-module": "http://localhost:5001/remoteEntry.js"
+
+## Stay in touch
+- Author - [Santiago Comeras Oteo](https://santiagocomerasoteo.es)

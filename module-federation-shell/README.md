@@ -27,3 +27,6 @@ Have a particular look at the following files:
         - declare module 'hello-world/Module';
     - mf.manifest.json
         - "hello-world": "http://localhost:5999/remoteEntry.js"
+
+## Stay in touch
+- Author - [Santiago Comeras Oteo](https://santiagocomerasoteo.es)

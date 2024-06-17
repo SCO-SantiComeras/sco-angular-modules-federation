@@ -16,3 +16,6 @@ Have a particular look at the following files:
 - Install packages: ``npm`` || ``yarn`` (!)*
 - Start Micro Frontend (remote): ``ng serve modules -o``
 - Make sure ``modules`` is started before ``shell`` is loaded into the browser
+
+## Stay in touch
+- Author - [Santiago Comeras Oteo](https://santiagocomerasoteo.es)
