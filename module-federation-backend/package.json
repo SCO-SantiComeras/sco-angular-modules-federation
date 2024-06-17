@@ -5,13 +5,17 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "prebuild": "rimraf dist",
+    "build": "rimraf dist && mkdir dist && copyfiles -u 1 src/**/* dist && copyfiles package.json dist/",
     "start": "node src/index.js",
+    "pm2:start": "pm2 start index.js --name modules-federation-backend",
     "start:dev": "nodemon src/index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.20.2",
+    "copyfiles": "^2.4.1",
     "cors": "^2.8.5",
     "express": "^4.19.2",
     "nodemon": "^3.1.2"
