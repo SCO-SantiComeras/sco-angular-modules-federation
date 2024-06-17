@@ -3,10 +3,10 @@ export const environment = {
   production: true,
   https: false,
   apiHost: 'localhost',
-  apiPort: 3000,
+  apiPort: 3150,
   apiPrefix: 'api',
   apiUrl: '',
-  apiWebsocketPort: 3001,
+  apiWebsocketPort: 3151,
   apiWebsocketUrl: '',
 };
 

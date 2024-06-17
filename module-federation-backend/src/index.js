@@ -5,7 +5,7 @@ const cors = require('cors');
 
 /* Declarations */
 const app = express();
-const port = 3000;
+const port = 3150;
 const MODULES_ROUTES = require('./modules/modules.routes');
 const USERS_ROUTES = require('./users/users.routes');
 
