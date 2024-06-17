@@ -15,7 +15,7 @@ export class WebSocketService {
   private socket: Socket;
 
   constructor() {
-    this.socket = io(`ws://localhost:3001`);
+    this.socket = io(`${environment.apiWebsocketUrl}`);
   }
 
   public sendMessage(event: string, data?: any): void {
