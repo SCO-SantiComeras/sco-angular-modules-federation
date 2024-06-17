@@ -1,0 +1,5 @@
+{
+	"hello-world": "http://localhost/ng-federation-modules/hello-world/remoteEntry.js",
+	"modules": "http://localhost/ng-federation-modules/modules/remoteEntry.js",
+	"users": "http://localhost/ng-federation-modules/users/remoteEntry.js"
+}

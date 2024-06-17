@@ -1,8 +1,8 @@
 export const environment = {
   env: 'prod',
   production: true,
-  https: false,
-  apiHost: 'localhost',
+  https: true,
+  apiHost: 'scoapps.es',
   apiPort: 3150,
   apiPrefix: 'api',
   apiUrl: '',
