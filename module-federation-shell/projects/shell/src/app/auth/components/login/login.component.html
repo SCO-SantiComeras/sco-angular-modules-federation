@@ -1,0 +1,30 @@
+<div class="login">
+  <div class="login__content row">
+    <form [formGroup]="loginForm">
+
+      <div class="col-12">
+        <input type="text" class="form-control" placeholder="Ingresa tu usuario" formControlName="name">
+        <span class="text-danger ps-2 fst-italic" *ngIf="errors && errors['name']">
+          {{errors['name']}}
+        </span>  
+      </div>
+      
+      <div class="col-12 mt-3">
+        <input type="password" class="form-control" placeholder="Ingresa tu contraseña" formControlName="password">
+        <span class="text-danger ps-2 fst-italic" *ngIf="errors && errors['password']">
+          {{errors['password']}}
+        </span>  
+      </div>
+
+      <div class="col-12 text-end mt-4">
+        <button class="btn btn-danger me-2" (click)="onCancelForm()">
+          Cancelar
+        </button>
+        <button class="btn btn-success" (click)="onSubmitForm()">
+          Conectar
+        </button>
+      </div>
+
+    </form>
+  </div>
+</div>

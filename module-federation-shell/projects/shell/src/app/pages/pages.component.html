@@ -1,0 +1,19 @@
+<div class="pages" [ngStyle]="{'height': contentHeight != undefined && contentHeight > 0 ? (contentHeight + 'px') : '100%' }">
+
+    <!-- Side bar -->
+    <div class="pages__sidebar" [ngStyle]="{'height': contentHeight != undefined && contentHeight > 0 ? (contentHeight + 'px') : '100%' }">
+        <ng-container *ngIf="loginResponse && loginResponse.menu && loginResponse.menu.length > 0">
+            <div class="pages__sidebar--item" *ngFor="let menuItem of loginResponse.menu; let i = index;"
+                (click)="onClickMenuItem(menuItem.menuRoute)"
+            >
+                <span>{{menuItem.menuName}}</span>
+            </div>
+        </ng-container>
+    </div>
+
+    <!-- Content -->
+    <div class="pages__content" [ngStyle]="{'height': contentHeight != undefined && contentHeight > 0 ? (contentHeight + 'px') : '100%' }">
+        <router-outlet></router-outlet>
+    </div>
+
+</div>

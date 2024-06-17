@@ -1,0 +1,28 @@
+<div class="app">
+  <header class="app__header" #header>
+    <img class="app__header--logo" src="../assets/sco-logo.png">
+    <span class="app__header--title">Angular Modules Federation Example</span>
+    <div class="app__header--logout">
+      <i class="bi bi-arrow-left app__header--logout__icon" *ngIf="loginResponse" (click)="onUserLogout()"></i>
+    </div>
+  </header>
+  <body class="app__body" #content [hidden]="contentHeight == undefined"
+    [ngStyle]="{
+      'height': contentHeight != undefined && contentHeight > 0 ? (contentHeight + 'px') : '100%' 
+    }"
+  >
+
+    <!-- Login -->
+    <app-login *ngIf="!loginResponse"
+      (onCancel)="onCancelLoginForm()"
+      (onSubmit)="onSubmitLoginForm($event)">
+    </app-login>
+
+    <!-- Content Page Sidebar / Content -->
+    <app-pages *ngIf="loginResponse"></app-pages>
+
+    <!-- Global Toast -->
+    <app-toast [orientation]="'top-right'" [block]="false"></app-toast>
+
+  </body>
+</div>

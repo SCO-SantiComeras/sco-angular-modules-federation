@@ -1,0 +1,16 @@
+{
+  "name": "sco-angular-modules-federation",
+  "version": "0.0.0",
+  "scripts": {
+    "run-shell-dev": "cd ./module-federation-shell && npm run start && cd ..",
+    "run-backend-dev": "cd ./module-federation-backend && npm run start:dev && cd ..",
+    "run-hello-world-dev": "cd ./module-federation-hello-world && npm run start && cd ..",
+    "run-modules-dev": "cd ./module-federation-modules && npm run start && cd ..",
+    "run-dev": "concurrently \"npm run run-shell-dev\" \"npm run run-backend-dev\" \"npm run run-hello-world-dev\" \"npm run run-modules-dev\""
+  },
+  "private": true,
+  "dependencies": {
+    "concurrently": "^8.2.2",
+    "copyfiles": "^2.4.1"
+  }
+}

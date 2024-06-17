@@ -1,0 +1,20 @@
+.login {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    background-color: transparent;
+
+    &__content {
+        border: 2px solid #082f5e;
+        border-radius: 4px;
+        width: 400px;
+        height: max-content;
+        background-color: lightgray;
+        display: flex;
+        padding: 20px;
+    }
+}

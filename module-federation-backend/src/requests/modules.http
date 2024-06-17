@@ -1,0 +1,6 @@
+###
+
+GET http://localhost:3000/api/modules/list-modules HTTP/1.1
+
+###
+GET http://localhost:3000/api/modules/get-module/FlightsModule HTTP/1.1

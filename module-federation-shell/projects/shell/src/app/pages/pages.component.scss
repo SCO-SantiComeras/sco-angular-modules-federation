@@ -1,0 +1,28 @@
+.pages {
+    width: 100vw;
+    display: flex;
+
+    &__sidebar {
+        width: 20%;
+        overflow: auto;
+        border-right: 2px solid #082f5e;
+
+        &--item {
+            padding: 10px;
+            cursor: pointer;
+            border-bottom: 1px solid #082f5e;
+            font-size: 18px;
+            font-weight: 500;
+
+            &:hover {
+                background-color: rgba(96, 96, 96, 0.4);
+            }
+        }
+    }
+
+    &__content {
+        width: 80%;
+        overflow: auto;
+        padding: 10px;
+    }
+}

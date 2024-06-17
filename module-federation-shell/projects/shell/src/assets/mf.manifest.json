@@ -1,0 +1,5 @@
+{
+	"hello-world": "http://localhost:5999/remoteEntry.js",
+	"modules": "http://localhost:5001/remoteEntry.js",
+	"users": "http://localhost:5002/remoteEntry.js"
+}

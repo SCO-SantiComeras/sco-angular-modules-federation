@@ -1,0 +1,21 @@
+<div class="app-toast" 
+  [ngClass]="{
+    'app-toast__top-right': orientation == toastService.TOAST_CONSTANTS.ORIENTATION_TOP_RIGHT,
+    'app-toast__top-left': orientation == toastService.TOAST_CONSTANTS.ORIENTATION_TOP_LEFT,
+    'app-toast__bottom-right': orientation == toastService.TOAST_CONSTANTS.ORIENTATION_BOTTOM_RIGHT,
+    'app-toast__bottom-left': orientation == toastService.TOAST_CONSTANTS.ORIENTATION_BOTTOM_LEFT
+  }"
+>
+
+  <div class="app-toast__container bg-{{toast.status}} border-{{toast.status}}"
+    [@overlayAnimation]="{value: 'visible'}"
+    [ngClass]="{'app-toast__container--block': block == true}"
+    *ngFor="let toast of toastService.toasts"
+  >
+
+    <div class="app-toast__container--content" (click)="closeToast(toast)">
+      <span>{{toast.message}}</span>
+    </div>
+
+  </div>
+</div>

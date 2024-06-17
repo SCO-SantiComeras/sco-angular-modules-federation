@@ -1,0 +1,6 @@
+###
+
+GET http://localhost:3000/api/users/list-users HTTP/1.1
+
+###
+GET http://localhost:3000/api/users/get-user/admin HTTP/1.1
