@@ -76,12 +76,12 @@
 							],
 							"fileReplacements": [
 								{
-									"replace": "projects/users/src/environments/environment.ts",
-									"with": "projects/users/src/environments/environment.pre.ts"
+									"replace": "projects/hello-world/src/environments/environment.ts",
+									"with": "projects/hello-world/src/environments/environment.pre.ts"
 								}
 							],
 							"outputHashing": "all",
-							"extraWebpackConfig": "projects/users/webpack.pre.config.js"
+							"extraWebpackConfig": "projects/hello-world/webpack.pre.config.js"
 						},
 						"development": {
 							"buildOptimizer": false,

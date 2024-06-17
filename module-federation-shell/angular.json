@@ -74,14 +74,14 @@
 									"maximumError": "4kb"
 								}
 							],
-							"fileReplacements": [
+						"fileReplacements": [
 								{
-									"replace": "projects/users/src/environments/environment.ts",
-									"with": "projects/users/src/environments/environment.pre.ts"
+									"replace": "projects/shell/src/environments/environment.ts",
+									"with": "projects/shell/src/environments/environment.pre.ts"
 								}
 							],
 							"outputHashing": "all",
-							"extraWebpackConfig": "projects/users/webpack.pre.config.js"
+							"extraWebpackConfig": "projects/shell/webpack.pre.config.js"
 						},
 						"development": {
 							"buildOptimizer": false,
