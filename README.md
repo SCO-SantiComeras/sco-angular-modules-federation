@@ -17,8 +17,8 @@ Cada microfrontend cuenta con tres (3) entornos, desarrollo (dev), preproducció
 # Iniciar repositorio en desarrollo
 
 Para iniciar y probar el repositorio seguiremos los siguientes pasos:
-- git clone
-- cd git clone folder
+- git clone https://github.com/SCO-SantiComeras/sco-angular-modules-federation.git
+- cd sco-angular-modules-federation
 - npm i (Dependencias de para gestionar el unirepositorio)
 - npm run install-deps (Dependencias del resto de proyectos)
 - npm run run-dev
