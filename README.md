@@ -61,5 +61,9 @@ Para desplegar los microfrontends, en este ejemplo utilizaremos un servidor Web,
     - https://scoapps.es/ng-federation-modules/modules/
     - https://scoapps.es/ng-federation-modules/users/
 
+- Usuarios de prueba
+    - admin // admin
+    - user // user
+
 # Stay in touch
 - Author - [Santiago Comeras Oteo](https://santiagocomerasoteo.es)
