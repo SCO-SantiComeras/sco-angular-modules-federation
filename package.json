@@ -2,11 +2,39 @@
   "name": "sco-angular-modules-federation",
   "version": "0.0.0",
   "scripts": {
+    "install-shell": "cd ./module-federation-shell && npm i && cd ..",
+    "install-backend": "cd ./module-federation-backend && npm i && cd ..",
+    "install-hello-world": "cd ./module-federation-hello-world && npm i && cd ..",
+    "install-modules": "cd ./module-federation-modules && npm i && cd ..",
+    "install-users": "cd ./module-federation-users && npm i && cd ..",
+    "install-deps": "concurrently \"npm run install-shell\" \"npm run install-backend\" \"npm run install-hello-world\" \"npm run install-modules\" \"npm run install-users\"",
+
     "run-shell-dev": "cd ./module-federation-shell && npm run start && cd ..",
     "run-backend-dev": "cd ./module-federation-backend && npm run start:dev && cd ..",
     "run-hello-world-dev": "cd ./module-federation-hello-world && npm run start && cd ..",
     "run-modules-dev": "cd ./module-federation-modules && npm run start && cd ..",
-    "run-dev": "concurrently \"npm run run-shell-dev\" \"npm run run-backend-dev\" \"npm run run-hello-world-dev\" \"npm run run-modules-dev\""
+    "run-users-dev": "cd ./module-federation-users && npm run start && cd ..",
+    "run-dev": "concurrently \"npm run run-shell-dev\" \"npm run run-backend-dev\" \"npm run run-hello-world-dev\" \"npm run run-modules-dev\" \"npm run run-users-dev\"",
+
+    "build-backend": "cd ./module-federation-backend && npm run build && cd ..",
+
+    "build-shell-dev": "cd ./module-federation-shell && npm run build && cd ..",
+    "build-hello-world-dev": "cd ./module-federation-hello-world && npm run build && cd ..",
+    "build-modules-dev": "cd ./module-federation-modules && npm run build && cd ..",
+    "build-users-dev": "cd ./module-federation-users && npm run build && cd ..",
+    "build-dev": "concurrently \"npm run build-shell-dev\" \"npm run build-hello-world-dev\" \"npm run build-modules-dev\" \"npm run build-users-dev\" \"npm run build-backend\"",
+
+    "build-shell-pre": "cd ./module-federation-shell && npm run build:pre && cd ..",
+    "build-hello-world-pre": "cd ./module-federation-hello-world && npm run build:pre && cd ..",
+    "build-modules-pre": "cd ./module-federation-modules && npm run build:pre && cd ..",
+    "build-users-pre": "cd ./module-federation-users && npm run build:pre && cd ..",
+    "build-pre": "concurrently \"npm run build-shell-pre\" \"npm run build-hello-world-pre\" \"npm run build-modules-pre\" \"npm run build-users-pre\" \"npm run build-backend\"",
+
+    "build-shell-prod": "cd ./module-federation-shell && npm run build:prod && cd ..",
+    "build-hello-world-prod": "cd ./module-federation-hello-world && npm run build:prod && cd ..",
+    "build-modules-prod": "cd ./module-federation-modules && npm run build:prod && cd ..",
+    "build-users-prod": "cd ./module-federation-users && npm run build:prod && cd ..",
+    "build-prod": "concurrently \"npm run build-shell-prod\" \"npm run build-hello-world-prod\" \"npm run build-modules-prod\" \"npm run build-users-prod\" \"npm run build-backend\""
   },
   "private": true,
   "dependencies": {
