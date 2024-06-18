@@ -6,6 +6,8 @@ import { Observable } from 'rxjs';
 import { AppState } from '../store/app.state';
 import { AuthState } from '../auth/store/auth.state';
 import { LoginResponse } from '../auth/model/login-response';
+import { Module } from '../common/module';
+import { WebComponentWrapper, WebComponentWrapperOptions } from '@angular-architects/module-federation-tools';
 
 @Component({
   selector: 'app-pages',
@@ -44,20 +46,44 @@ export class PagesComponent implements OnInit {
   private createMenuRoutes(): void {
     if (this.loginResponse && this.loginResponse.menu && this.loginResponse.menu.length > 0) {
       for (const menuItem of this.loginResponse.menu) {
-        const newRoute: Route = {
-          path: menuItem.path,
-          loadChildren: () =>
-            loadRemoteModule({
-              type: menuItem.type,
-              remoteName: menuItem.remoteName,
-              exposedModule: menuItem.exposedModule,
-            }).then((m) => m[menuItem.moduleName]),
-        };
-
-        this.router.config.push(newRoute);
+        if (!menuItem.react) {
+          this.router.config.push(this.loadAngularFederationModule(menuItem));
+        } else {
+          this.router.config.push(this.loadReactDynamicModule(menuItem));
+        }
       }
       
       this.router.resetConfig(this.router.config); 
     }
+  }
+
+  private loadAngularFederationModule(menuItem: Module): Route {
+    const newRoute: Route = {
+      path: menuItem.path,
+      loadChildren: () =>
+        loadRemoteModule({
+          type: menuItem.type,
+          remoteName: menuItem.remoteName,
+          exposedModule: menuItem.exposedModule,
+        }).then((m) => m[menuItem.moduleName]),
+    };
+
+    return newRoute;
+  }
+
+  private loadReactDynamicModule(menuItem: Module): Route {
+    const newRoute: Route = {
+      path: menuItem.path,
+      component: WebComponentWrapper,
+      data: {
+        type: menuItem.type,
+        remoteEntry: menuItem.remoteEntry,
+        remoteName: menuItem.remoteName,
+        exposedModule: menuItem.exposedModule,
+        elementName: menuItem.moduleName,
+      } as WebComponentWrapperOptions,
+    };
+
+    return newRoute;
   }
 }

@@ -7,6 +7,18 @@ module.exports = Object.freeze([
         remoteName: 'hello-world',
         exposedModule: './Module',
         moduleName: 'TestModule',
+        react: false,
+    },
+    {
+        menuName: 'Módulo react',
+        menuRoute: '/react',
+        path: 'react',
+        type: 'script',
+        remoteName: 'react',
+        exposedModule: './web-components',
+        moduleName: 'react-element',
+        react: true,
+        remoteEntry: 'https://witty-wave-0a695f710.azurestaticapps.net/remoteEntry.js'
     },
     {
         menuName: 'Módulos',
@@ -16,6 +28,7 @@ module.exports = Object.freeze([
         remoteName: 'modules',
         exposedModule: './Module',
         moduleName: 'ModulesModule',
+        react: false,
     },
     {
         menuName: 'Usuarios',
@@ -25,5 +38,6 @@ module.exports = Object.freeze([
         remoteName: 'users',
         exposedModule: './Module',
         moduleName: 'UsersModule',
+        react: false,
     },
 ]);

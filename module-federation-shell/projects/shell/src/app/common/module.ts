@@ -6,4 +6,6 @@ export class Module {
     remoteName: string;
     exposedModule: string;
     moduleName: string;
+    react: boolean;
+    remoteEntry?: string
 }
