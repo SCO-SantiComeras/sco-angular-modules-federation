@@ -44,7 +44,7 @@ app.use('/api', [
 ]);
 
 
-if (httpOptions == undefined) {
+if (httpOptions.key == undefined || httpOptions.cert == undefined) {
   /* Server */
   app.listen(port, () => {
     console.log(`Backend starts in route http://localhost:${port}`);
