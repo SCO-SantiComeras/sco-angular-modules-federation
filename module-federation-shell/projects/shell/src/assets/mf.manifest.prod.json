@@ -1,5 +1,5 @@
 {
-	"hello-world": "https://scoapps.es/ng-federation-modules/hello-world/remoteEntry.js",
-	"modules": "https://scoapps.es/ng-federation-modules/modules/remoteEntry.js",
-	"users": "https://scoapps.es/ng-federation-modules/users/remoteEntry.js"
+	"hello-world": "https://ng.module.federation.sco-techlab.es/hello-world/remoteEntry.js",
+	"modules": "https://ng.module.federation.sco-techlab.es/modules/remoteEntry.js",
+	"users": "https://ng.module.federation.sco-techlab.es/users/remoteEntry.js"
 }
