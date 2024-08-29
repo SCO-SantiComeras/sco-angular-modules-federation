@@ -2,7 +2,7 @@ export const environment = {
   env: 'prod',
   production: true,
   https: true,
-  apiHost: 'scoapps.es',
+  apiHost: 'ng.module.federation.sco-techlab.es',
   apiPort: 3150,
   apiPrefix: 'api',
   apiUrl: '',
